@@ -351,13 +351,7 @@ All services include health check configurations:
 
 Services start in proper order using Docker Compose `depends_on`:
 
-```
-Databases (MongoDB, Neo4j, PostgreSQL)
-  ↓
-Core API (waits for all databases to be healthy)
-  ↓
-Ingestion & Read APIs (wait for Core API to be healthy)
-```
+![Dependency-Management](assets/images/Dependency_Management_openGIN.png)
 
 ### Docker Compose Profiles
 - **Default**: Runs all core services
